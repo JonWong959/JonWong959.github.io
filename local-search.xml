@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>使用hexo发文报错can not read a block mapping entry</title>
+    <link href="/2022/02/12/%E4%BD%BF%E7%94%A8hexo%E5%8F%91%E6%96%87%E6%8A%A5%E9%94%99/"/>
+    <url>/2022/02/12/%E4%BD%BF%E7%94%A8hexo%E5%8F%91%E6%96%87%E6%8A%A5%E9%94%99/</url>
+    
+    <content type="html"><![CDATA[<p>今天使用hexo发文时候，输入<code>hexo g</code>的时候报错：</p><p><code>can not read a block mapping entry; a multiline key may not be an implicit key at line *, column *:</code></p><p>上网转了一圈发现是设置tag属性之后没有加空格，导致报错，甚至整个博客页面崩溃。</p><p>所以要严格按照语法来写文章头部。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>hexo博客推送github显示鉴权失败</title>
     <link href="/2022/02/12/hexo%E5%8D%9A%E5%AE%A2%E6%8E%A8%E9%80%81github%E6%98%BE%E7%A4%BA%E9%89%B4%E6%9D%83%E5%A4%B1%E8%B4%A5/"/>
     <url>/2022/02/12/hexo%E5%8D%9A%E5%AE%A2%E6%8E%A8%E9%80%81github%E6%98%BE%E7%A4%BA%E9%89%B4%E6%9D%83%E5%A4%B1%E8%B4%A5/</url>
