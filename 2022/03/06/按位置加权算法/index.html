@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/imgs/favicon-cat.png">
+  <link rel="icon" href="/img/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -16,12 +16,12 @@
   <meta name="author" content="Jon Wong">
   <meta name="keywords" content="">
   
-    <meta name="description" content="最近刷的一道算法题，发现了一个比较有趣的算法，记录一下 题目有一部分是求位数加权和：$$\sum_{i&#x3D;1}^n c_i\times(n-i+1)$$例如【43152】：$$Val&#x3D;4\times5+3\times4+1\times3+5\times2+2\times1$$一般写法为： 12345val &#x3D; 0list &#x3D; [4, 3, 1, 5, 2]for i in ran">
+    <meta name="description" content="最近刷的一道算法题，发现了一个比较有趣的算法，记录一下  题目有一部分是求位数加权和： $$ \sum_{i&#x3D;1}^n c_i\times(n-i+1) $$ 例如【43152】： $$ Val&#x3D;4\times5+3\times4+1\times3+5\times2+2\times1 $$ 一般写法为：  12345val &#x3D; 0list &#x3D; [4, 3, 1, 5, 2]for i in ra">
 <meta property="og:type" content="article">
 <meta property="og:title" content="按位置加权算法">
 <meta property="og:url" content="http://example.com/2022/03/06/%E6%8C%89%E4%BD%8D%E7%BD%AE%E5%8A%A0%E6%9D%83%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="JonWong的博客">
-<meta property="og:description" content="最近刷的一道算法题，发现了一个比较有趣的算法，记录一下 题目有一部分是求位数加权和：$$\sum_{i&#x3D;1}^n c_i\times(n-i+1)$$例如【43152】：$$Val&#x3D;4\times5+3\times4+1\times3+5\times2+2\times1$$一般写法为： 12345val &#x3D; 0list &#x3D; [4, 3, 1, 5, 2]for i in ran">
+<meta property="og:description" content="最近刷的一道算法题，发现了一个比较有趣的算法，记录一下  题目有一部分是求位数加权和： $$ \sum_{i&#x3D;1}^n c_i\times(n-i+1) $$ 例如【43152】： $$ Val&#x3D;4\times5+3\times4+1\times3+5\times2+2\times1 $$ 一般写法为：  12345val &#x3D; 0list &#x3D; [4, 3, 1, 5, 2]for i in ra">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-06T12:04:18.000Z">
 <meta property="article:modified_time" content="2022-03-06T16:36:08.620Z">
@@ -175,7 +175,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/imgs/banner.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -201,7 +201,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      364 字
+      354 字
     </span>
   
 
@@ -210,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4 分钟
+      3 分钟
     </span>
   
 
@@ -242,11 +242,23 @@
             <h1 style="display: none">按位置加权算法</h1>
             
             <div class="markdown-body">
-              <p>最近刷的一道算法题，发现了一个比较有趣的算法，记录一下</p>
-<p>题目有一部分是求位数加权和：<br>$$<br>\sum_{i&#x3D;1}^n c_i\times(n-i+1)<br>$$<br>例如【43152】：<br>$$<br>Val&#x3D;4\times5+3\times4+1\times3+5\times2+2\times1<br>$$<br>一般写法为：</p>
+              
+最近刷的一道算法题，发现了一个比较有趣的算法，记录一下
+
+题目有一部分是求位数加权和：
+$$
+\sum_{i=1}^n c_i\times(n-i+1)
+$$
+例如【43152】：
+$$
+Val=4\times5+3\times4+1\times3+5\times2+2\times1
+$$
+一般写法为：
+
 <figure class="highlight python"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><pre><code class="hljs python">val = <span class="hljs-number">0</span><br><span class="hljs-built_in">list</span> = [<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(<span class="hljs-built_in">list</span>)):<br>    val += <span class="hljs-built_in">list</span>[i] * (<span class="hljs-built_in">len</span>(<span class="hljs-built_in">list</span>) - i)<br><span class="hljs-built_in">print</span>(val)<br></code></pre></td></tr></table></figure>
 
-<p>书上的写法为将数组的第一位置0，然后从第二位开始加：</p>
+书上的写法为将数组的第一位置0，然后从第二位开始加：
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">val = <span class="hljs-number">0</span><br><span class="hljs-built_in">list</span> = [<span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-built_in">len</span>(<span class="hljs-built_in">list</span>)):<br>    <span class="hljs-built_in">list</span>[i] = <span class="hljs-built_in">list</span>[i] + <span class="hljs-built_in">list</span>[i-<span class="hljs-number">1</span>]<br>    val += <span class="hljs-built_in">list</span>[i]<br><span class="hljs-built_in">print</span>(val)<br><br></code></pre></td></tr></table></figure>
 
 
