@@ -16,12 +16,12 @@
   <meta name="author" content="Jon Wong">
   <meta name="keywords" content="">
   
-    <meta name="description" content="更换新电脑，部署hexo博客的时候，向仓库推时报错，显示鉴权失败，记录下解决办法。    ## 解决过程  #### 环境说明  客户端：macOS M1芯片  托管平台：github  #### 问题描述：  在使用&#96;hexo d&#96;推送时，出现鉴权失败错误。  ## 解决方案  修改站点配置文件&#96;_config.yml&#96;  123456# Deployment## Docs: https:&#x2F;&#x2F;">
+    <meta name="description" content="更换新电脑，部署hexo博客的时候，向仓库推时报错，显示鉴权失败，记录下解决办法。 解决过程 环境说明 客户端：macOS M1芯片 托管平台：github 问题描述： 在使用hexo d推送时，出现鉴权失败错误。 解决方案 修改站点配置文件_config.yml 123456# Deployment## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;one-command-deploym">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo博客推送github显示鉴权失败">
 <meta property="og:url" content="http://example.com/2022/02/12/hexo%E5%8D%9A%E5%AE%A2%E6%8E%A8%E9%80%81github%E6%98%BE%E7%A4%BA%E9%89%B4%E6%9D%83%E5%A4%B1%E8%B4%A5/index.html">
 <meta property="og:site_name" content="JonWong的博客">
-<meta property="og:description" content="更换新电脑，部署hexo博客的时候，向仓库推时报错，显示鉴权失败，记录下解决办法。    ## 解决过程  #### 环境说明  客户端：macOS M1芯片  托管平台：github  #### 问题描述：  在使用&#96;hexo d&#96;推送时，出现鉴权失败错误。  ## 解决方案  修改站点配置文件&#96;_config.yml&#96;  123456# Deployment## Docs: https:&#x2F;&#x2F;">
+<meta property="og:description" content="更换新电脑，部署hexo博客的时候，向仓库推时报错，显示鉴权失败，记录下解决办法。 解决过程 环境说明 客户端：macOS M1芯片 托管平台：github 问题描述： 在使用hexo d推送时，出现鉴权失败错误。 解决方案 修改站点配置文件_config.yml 123456# Deployment## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;one-command-deploym">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-12T14:21:04.000Z">
 <meta property="article:modified_time" content="2022-02-12T14:26:37.435Z">
@@ -201,7 +201,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      309 字
+      293 字
     </span>
   
 
@@ -242,30 +242,17 @@
             <h1 style="display: none">hexo博客推送github显示鉴权失败</h1>
             
             <div class="markdown-body">
-              
-更换新电脑，部署hexo博客的时候，向仓库推时报错，显示鉴权失败，记录下解决办法。
-
-
-
-## 解决过程
-
-#### 环境说明
-
-客户端：macOS M1芯片
-
-托管平台：github
-
-#### 问题描述：
-
-在使用`hexo d`推送时，出现鉴权失败错误。
-
-## 解决方案
-
-修改站点配置文件`_config.yml`
-
+              <p>更换新电脑，部署hexo博客的时候，向仓库推时报错，显示鉴权失败，记录下解决办法。</p>
+<h2 id="解决过程">解决过程</h2>
+<h4 id="环境说明">环境说明</h4>
+<p>客户端：macOS M1芯片</p>
+<p>托管平台：github</p>
+<h4 id="问题描述">问题描述：</h4>
+<p>在使用<code>hexo d</code>推送时，出现鉴权失败错误。</p>
+<h2 id="解决方案">解决方案</h2>
+<p>修改站点配置文件<code>_config.yml</code></p>
 <figure class="highlight dts"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><pre><code class="hljs dts"><span class="hljs-meta"># Deployment</span><br><span class="hljs-meta">## Docs: https:<span class="hljs-comment">//hexo.io/docs/one-command-deployment</span></span><br><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">  type:</span> git<br><span class="hljs-symbol">  repo:</span> git@github.com:JonWong959/JonWong959.github.io.git<br><span class="hljs-symbol">  branch:</span> master<br></code></pre></td></tr></table></figure>
-
-把repo从https地址改成SSH地址。
+<p>把repo从https地址改成SSH地址。</p>
 
             </div>
             <hr>
